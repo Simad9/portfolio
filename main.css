@@ -104,6 +104,7 @@ header {
   padding: 0 100px;
   background: linear-gradient(174deg, #151C2F 39.74%, #B5BEDF 93.72%);
   ;
+  height: 592px;
 }
 
 .hero-content {
@@ -185,9 +186,7 @@ header {
   box-shadow: none;
 }
 
-.hero-img{
-  width: 50%;
-}
+
 
 /* About */
 .about {
@@ -196,7 +195,7 @@ header {
   align-items: center;
   padding: 60px 110px;
   gap: 80px;
-  margin-top: -10px;
+  margin-top: -5px;
   background-color: var(--second-bg);
 }
 
@@ -207,7 +206,7 @@ header {
   margin-bottom: 20px;
 }
 
-.content-about h2 {
+.heading {
   font-size: 53px;
   font-weight: 600;
   line-height: 58px;
@@ -218,4 +217,92 @@ header {
   text-indent: 10px;
   color: var(--text);
   font-size: 22px;
+}
+
+/* Projects */
+.projects {
+  padding: 70px 100px;
+  background: linear-gradient(6deg, #151C2F 39.74%, #B5BEDF 93.72%);
+  height: 592px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.projects .heading {
+  margin-bottom: 35px;
+}
+
+.projects-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 70px;
+}
+
+.projects-item .project-box {
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 1 var(--bg);
+  display: flex;
+  overflow: hidden;
+}
+
+.project-box img {
+  width: 100%;
+  transition: .5s ease;
+}
+
+.project-box:hover img {
+  transform: scale(1.1);
+}
+
+.project-box .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 20px;
+  transform: translateY(100%);
+  transition: .5s ease;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 40%, #83ACE7 100%);
+  color: var(--text);
+}
+
+.project-box:hover .overlay {
+  transform: translateY(0);
+}
+
+.overlay h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 0 0 1px black;
+}
+
+.overlay p {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-shadow: 0 0 1px black;
+}
+
+.overlay i{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--text);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--bg);
 }
