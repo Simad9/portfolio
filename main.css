@@ -813,6 +813,58 @@ header {
   /* Nutup 768px*/
 }
 
+/* Custom 455px */
+@media (max-width: 479px) {
+  /* Home 455 */
+
+  /* About CSS 455*/
+  .about-img img {
+    width: 360px;
+  }
+
+  /* Projects CSS 455*/
+  .projects {
+    height: auto;
+  }
+
+  .projects .heading {
+    margin-bottom: 0px;
+  }
+
+  .projects-item {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  .project-box .overlay {
+    padding: 5px 20px;
+  }
+
+  .overlay h3 {
+    font-size: 30px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+  }
+
+  .overlay i {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  /* Contact CSS 455*/
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+
+  /* Nutup 455px*/
+}
+
+
 /* Mobile L 425px */
 @media (max-width: 425px) {
   header {
@@ -1244,7 +1296,7 @@ header {
   }
 
   /* Contact CSS 320*/
-  .contact form{
+  .contact form {
     margin-bottom: 30px;
   }
 
