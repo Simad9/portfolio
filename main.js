@@ -1,10 +1,12 @@
-// Menu burger dan menu x
-const menu = document.querySelector('.menu ');
-menu.addEventListener('click', () => {
-  let img = document.querySelector('.menu img').src;
-  if (img.indexOf('burger') == -1) {
-    document.querySelector('.menu img').src = 'img/burger.png';
-  } else {
-    document.querySelector('.menu img').src = 'img/x.png';
-  }
+// Menu burger
+const menuIcon = document.querySelector('#menu-icon')
+const navigation = document.querySelector('.navigation')
+menuIcon.addEventListener('click', () => {
+  menuIcon.classList.toggle('bx-x')
+  navigation.classList.toggle('active')
 })
+
+window.onscroll = () => {
+  menuIcon.classList.remove('bx-x')
+  navigation.classList.remove('active')
+}
