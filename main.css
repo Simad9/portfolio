@@ -26,9 +26,9 @@ body {
 /* NAV CSS */
 
 header {
-  /* position: fixed;
+  position: sticky;
   top: 0;
-  left: 0; */
+  left: 0;
   width: 100%;
   padding: 20px 100px;
   background-color: var(--bg);
@@ -96,18 +96,17 @@ header {
   display: none;
 }
 
-/* HERO CSS */
-.hero {
+/* HOME CSS */
+.home {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-;
   align-items: center;
   padding: 0 100px;
   background: linear-gradient(174deg, #151C2F 39.74%, #B5BEDF 93.72%);
-  ;
   height: 592px;
 }
 
-.hero-content {
+.home-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -173,7 +172,6 @@ header {
   color: var(--text);
   font-size: 20px;
   font-weight: 600;
-  padding: 5px 20px;
   border-radius: 18px;
   border: 2px solid var(--btn-color);
   background: var(--btn-color);
@@ -186,9 +184,7 @@ header {
   box-shadow: none;
 }
 
-
-
-/* About */
+/* About CSS */
 .about {
   display: flex;
   justify-content: center;
@@ -197,6 +193,10 @@ header {
   gap: 80px;
   margin-top: -5px;
   background-color: var(--second-bg);
+}
+
+.about-img img{
+  width: 650px;
 }
 
 .content-about .text {
@@ -219,7 +219,7 @@ header {
   font-size: 22px;
 }
 
-/* Projects */
+/* Projects CSS*/
 .projects {
   padding: 70px 100px;
   background: linear-gradient(6deg, #151C2F 39.74%, #B5BEDF 93.72%);
@@ -295,7 +295,7 @@ header {
   text-shadow: 0 0 1px black;
 }
 
-.overlay i{
+.overlay i {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -305,4 +305,285 @@ header {
   border-radius: 50%;
   font-size: 20px;
   color: var(--bg);
+}
+
+/* Contact CSS */
+.contact {
+  background-color: #7D859E;
+  padding: 30px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.contact form {
+  max-width: 100%;
+  margin: 10px auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  gap: 10px
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  padding: 5px 10px;
+  font-size: 20px;
+  color: var(--text);
+  background: var(--second-bg);
+  border-radius: 10px;
+  border: 1px solid var(--text);
+}
+
+.contact form textarea {
+  resize: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact form .btn {
+  cursor: pointer;
+}
+
+/* Footer CSS */
+.footer {
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--bg);
+}
+
+.footer-text p {
+  color: var(--text);
+  font-size: 20px;
+}
+
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--btn-color);
+  border-radius: 10px;
+  transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+  box-shadow: 0 0 10px var(--btn-color);
+}
+
+.footer-iconTop a i {
+  font-size: 20px;
+  color: var(--text);
+}
+
+/* RESPOSIVE */
+@media (max-width: 1024px) {
+  header {
+    padding: 10px 50px;
+  }
+  
+  .logo {
+    color: var(--text);
+    font-size: 20px;
+  }
+  
+  .navigation {
+    padding: 5px 10px;
+    gap: 15px;
+  }
+  
+  .nav-item {
+    padding: 0 10px;
+  }
+  
+  .nav-item a {
+    font-size: 18px;
+  }
+
+  /* Home 1024 */
+  .home {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  .text{
+    width: 90%;
+  }
+
+  .home-content {
+    gap: 25px;
+  }
+
+  .home-img img {
+    width: 430px;
+  }
+
+  .text h2 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  .text h3 {
+    font-size: 20px;
+  }
+
+  .text h4 {
+    font-size: 15px;
+  }
+
+  .sosial-media a {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-width: 3px;
+  }
+
+  .download {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .download .btn{
+    width: 51%;
+  }
+  .btn {
+    padding: 5px 15px;
+    font-size: 18px;
+    transition: .5s ease;
+  }
+
+  /* About CSS 1024*/
+  .about {
+    padding: 30px 55px;
+    gap: 40px;
+    margin-top: -62px;
+    background-color: var(--second-bg);
+  }
+
+  .about-img img{
+    width: 400px;
+  }
+
+  .content-about .text {
+  gap: 25px;
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    font-size: 43px;
+  }
+
+  .content-about p {
+    text-indent: 10px;
+    color: var(--text);
+    font-size: 15px;
+  }
+
+  /* Projects CSS 1024*/
+.projects {
+  padding: 0px 50px;
+  gap: 35px;
+  height: 450px;
+}
+
+.projects .heading {
+  margin-bottom: 28px;
+}
+
+.projects-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+
+.project-box .overlay {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.overlay h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.overlay p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.overlay i {
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+/* Contact CSS 1023*/
+.contact {
+  padding: 15px 50px;
+}
+
+.contact h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  margin-bottom: 40px;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.contact form textarea {
+  margin-bottom: 8px;
+}
+
+/* Footer CSS 1024*/
+.footer {
+  padding: 10px 50px;
+}
+
+.footer-text p {
+  font-size: 15px;
+}
+
+.footer-iconTop a {
+  padding: 5px;
+}
+
+.footer-iconTop a i {
+  font-size: 25px;
+}
+
+} /* Nutup 1024px*/
+
+@media (max-width: 768px){
+
 }
