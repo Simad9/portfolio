@@ -18,6 +18,10 @@
   --text: #fff;
 }
 
+html {
+  scroll-padding-top: var(--scroll-padding, 50px);
+}
+
 body {
   overflow-x: hidden;
   min-height: 100vh;
@@ -26,7 +30,7 @@ body {
 /* NAV CSS */
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -99,8 +103,9 @@ header {
 /* HOME CSS */
 .home {
   display: flex;
-  justify-content: space-;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 90px;
   padding: 0 100px;
   background: linear-gradient(174deg, #151C2F 39.74%, #B5BEDF 93.72%);
   height: 592px;
@@ -126,16 +131,88 @@ header {
   font-weight: 600;
   line-height: 58px;
   letter-spacing: 0.53px;
+  animation: fromRight 1s ease forwards;
 }
 
 .text h3 {
   font-size: 28px;
   font-weight: 500;
+  animation: fromTop 1s ease forwards;
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes popUp {
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .text h4 {
   font-size: 22px;
   font-weight: 500;
+  animation: fromBottom 1s ease forwards;
 }
 
 .sosial-media {
@@ -154,6 +231,7 @@ header {
   border-radius: 50%;
   font-size: 30px;
   color: var(--btn-color);
+  animation: fadeIn 2s ease forwards;
 }
 
 .sosial-media a:hover {
@@ -165,6 +243,7 @@ header {
 .download {
   display: flex;
   gap: 10px;
+  animation: fadeIn 2s ease forwards;
 }
 
 .btn {
@@ -182,6 +261,10 @@ header {
 .btn:hover {
   background: var(--btn-color);
   box-shadow: none;
+}
+
+.home-img{
+  animation: fromBottom 1s ease forwards;
 }
 
 /* About CSS */
@@ -813,16 +896,16 @@ header {
   /* Nutup 768px*/
 }
 
-/* Custom 455px */
+/* Custom 479px */
 @media (max-width: 479px) {
-  /* Home 455 */
+  /* Home 479 */
 
-  /* About CSS 455*/
+  /* About CSS 479*/
   .about-img img {
     width: 360px;
   }
 
-  /* Projects CSS 455*/
+  /* Projects CSS 479*/
   .projects {
     height: auto;
   }
@@ -855,13 +938,13 @@ header {
     font-size: 15px;
   }
 
-  /* Contact CSS 455*/
+  /* Contact CSS 479*/
 
   .contact form .input-box input {
     width: 100%;
   }
 
-  /* Nutup 455px*/
+  /* Nutup 479px*/
 }
 
 
