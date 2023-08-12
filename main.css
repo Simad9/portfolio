@@ -116,7 +116,6 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   gap: 21px;
-
 }
 
 .text {
@@ -126,98 +125,44 @@ header {
   color: var(--text);
 }
 
+.text h3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.show-animation .text h3 {
+  animation: fromTop 1s ease-in forwards;
+}
+
 .text h2 {
   font-size: 53px;
   font-weight: 600;
   line-height: 58px;
   letter-spacing: 0.53px;
-  animation: fromRight 1s ease forwards;
 }
 
-.text h3 {
-  font-size: 28px;
-  font-weight: 500;
-  animation: fromTop 1s ease forwards;
-}
-
-@keyframes fromTop {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fromBottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fromLeft {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fromRight {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes popUp {
-  0%{
-    opacity: 0;
-    transform: scale(0);
-  }
-  80%{
-    opacity: 1;
-    transform: scale(1.03);
-  }
-  100%{
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes fadeIn {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+.show-animation .text h2 {
+  animation: fromLeft 1s ease-in forwards;
 }
 
 .text h4 {
   font-size: 22px;
   font-weight: 500;
+  opacity: 0;
+}
+
+.show-animation .text h4 {
   animation: fromBottom 1s ease forwards;
 }
 
 .sosial-media {
   display: flex;
   gap: 20px;
+  opacity: 0;
+}
+
+.show-animation .sosial-media {
+  animation: fadeIn 2s ease forwards;
 }
 
 .sosial-media a {
@@ -231,7 +176,6 @@ header {
   border-radius: 50%;
   font-size: 30px;
   color: var(--btn-color);
-  animation: fadeIn 2s ease forwards;
 }
 
 .sosial-media a:hover {
@@ -243,7 +187,11 @@ header {
 .download {
   display: flex;
   gap: 10px;
-  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+.show-animation .download {
+  animation: fadeIn 3s ease forwards;
 }
 
 .btn {
@@ -256,6 +204,12 @@ header {
   background: var(--btn-color);
   box-shadow: 0px 0px 10px 0px var(--btn-color);
   transition: .5s ease;
+  opacity: 0;
+}
+
+.show-animation .btn {
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.3s;
 }
 
 .btn:hover {
@@ -263,8 +217,8 @@ header {
   box-shadow: none;
 }
 
-.home-img{
-  animation: fromBottom 1s ease forwards;
+.show-animation .home-img {
+  animation: fromRight 1s ease-in forwards;
 }
 
 /* About CSS */
@@ -280,9 +234,14 @@ header {
 
 .about-img img {
   width: 650px;
+  opacity: 0;
 }
 
-.content-about .text {
+.show-animation .about-img img {
+  animation: popUp 1.2s forwards;
+}
+
+.content-about .text-about {
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -294,12 +253,22 @@ header {
   font-weight: 600;
   line-height: 58px;
   color: var(--text);
+  opacity: 0;
+}
+
+.show-animation .heading {
+  animation: fromTop 1s ease forwards;
 }
 
 .content-about p {
   text-indent: 10px;
   color: var(--text);
   font-size: 22px;
+  opacity: 0;
+}
+
+.show-animation .content-about p {
+  animation: fromRight 1s ease forwards;
 }
 
 /* Projects CSS*/
@@ -323,6 +292,12 @@ header {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 70px;
+  opacity: 0;
+}
+
+.show-animation .projects-item {
+  animation: fromTop 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .projects-item .project-box {
@@ -405,11 +380,17 @@ header {
   margin-bottom: 30px;
 }
 
-.contact form {
+form {
   max-width: 100%;
   margin: 10px auto;
   text-align: center;
   margin-bottom: 50px;
+  opacity: 0;
+}
+
+.show-animation form {
+  animation: fromTop 1s ease forwards;
+  animation-delay: .2s;
 }
 
 .contact form .input-box {
@@ -478,6 +459,87 @@ header {
   color: var(--text);
 }
 
+/* Animation */
+.fromTop {
+  animation: fromTop 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /* RESPOSIVE */
 /* Laptop 1024px */
 @media (max-width: 1024px) {
@@ -508,6 +570,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
+    margin-top: -5px;
   }
 
   .text {
@@ -556,6 +619,7 @@ header {
     padding: 5px 15px;
     font-size: 18px;
     transition: .5s ease;
+    opacity: 1;
   }
 
   /* About CSS 1024*/
@@ -568,21 +632,36 @@ header {
 
   .about-img img {
     width: 400px;
+    opacity: 1;
   }
 
-  .content-about .text {
-    gap: 25px;
+  .show-animation .about-img img {
+    animation: none;
+  }
+
+  .content-about .text-about {
+    gap: 15px;
     margin-bottom: 20px;
   }
 
   .heading {
     font-size: 43px;
+    opacity: 1;
+  }
+
+  .show-animation .heading {
+    animation: none;
   }
 
   .content-about p {
     text-indent: 10px;
     color: var(--text);
     font-size: 15px;
+    opacity: 1;
+  }
+
+  .show-animation .content-about p {
+    animation: noe;
   }
 
   /* Projects CSS 1024*/
@@ -590,10 +669,12 @@ header {
     padding: 0px 50px;
     gap: 35px;
     height: 450px;
+
   }
 
   .projects .heading {
     margin-bottom: 28px;
+    opacity: 1;
   }
 
   .projects-item {
@@ -601,13 +682,18 @@ header {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 30px;
+    opacity: 1;
   }
+
+  .show-animation .projects-item {
+    animation: none;
+  }
+
 
   .project-box .overlay {
     padding: 5px 10px;
     display: flex;
     flex-direction: column;
-
   }
 
   .overlay h3 {
@@ -635,10 +721,16 @@ header {
   .contact h2 {
     margin-top: 20px;
     margin-bottom: 20px;
+    opacity: 1;
   }
 
   .contact form {
     margin-bottom: 40px;
+    opacity: 1;
+  }
+
+  .show-animation form {
+    animation: none;
   }
 
   .contact form .input-box input,
@@ -667,7 +759,6 @@ header {
   .footer-iconTop a i {
     font-size: 25px;
   }
-
 
 
   /* Nutup 1024px*/
@@ -722,7 +813,7 @@ header {
     padding: 130px 30px 50px;
     justify-content: center;
     align-items: center;
-    margin-top: -90px;
+    margin-top: 0px;
     height: auto;
 
   }
@@ -796,8 +887,8 @@ header {
     align-items: center;
   }
 
-  .content-about .text {
-    gap: 25px;
+  .content-about .text-about {
+    text-align: center;
     margin-bottom: 15px;
   }
 
@@ -901,6 +992,10 @@ header {
   /* Home 479 */
 
   /* About CSS 479*/
+  .about .text-about {
+    gap: 0px;
+  }
+
   .about-img img {
     width: 360px;
   }
@@ -946,7 +1041,6 @@ header {
 
   /* Nutup 479px*/
 }
-
 
 /* Mobile L 425px */
 @media (max-width: 425px) {
@@ -1021,8 +1115,7 @@ header {
     width: 300px;
   }
 
-  .content-about .text {
-    gap: 20px;
+  .content-about .text-about {
     margin-bottom: 13px;
   }
 
@@ -1190,8 +1283,7 @@ header {
     width: 280px;
   }
 
-  .content-about .text {
-    gap: 15px;
+  .content-about .text-about {
     margin-bottom: 13px;
   }
 
@@ -1330,12 +1422,12 @@ header {
     width: 250px;
   }
 
-  .content-about .text {
+  .content-about .text-about {
     gap: 13px;
     margin-bottom: 10px;
   }
 
-  .content-about .text h2 {
+  .content-about .text-about h2 {
     font-size: 26px;
   }
 

@@ -17,12 +17,16 @@ window.addEventListener('scroll', () => {
     let height = sec.offsetHeight
     let id = sec.getAttribute('id')
 
+    // Animasi ketika di scroll
+    if (top >= offset && top < offset + height) {
+      sec.classList.add('show-animation');
+    }
+    
     if (top >= offset && top < offset + height) {
       navLinks.forEach(links => {
         links.classList.remove('active');
         document.querySelector('header .navigation a[href="#' + id + '"').parentNode.classList.add('active')
       })
-
     }
   })
   menuIcon.classList.remove('bx-x')
