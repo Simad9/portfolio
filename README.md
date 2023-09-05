@@ -5,6 +5,9 @@ Ini adalah project untuk selesksi ITC divisi Web Dev, dimmana saya membuat portf
 
 Sebelum saya membuat website ini, saya mendesain terlebih dahulu di Figma, [klik disini untuk melihat desain](https://www.figma.com/file/9AB3bCVaRpi39ggB7U4gmh/My-Website?type=design&node-id=238%3A16&mode=design&t=6FvbuRsoGaEgZzWx-1)
 
+Akses website ini, [klik disini untuk melihat desain](https://simad9.github.io/portfolio)
+
+
 Yang terdapat di website ini :
 - Tentang saya
 - CV pdf saya
